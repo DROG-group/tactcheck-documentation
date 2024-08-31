@@ -1,0 +1,78 @@
+---
+title: Setup Instructions
+description: Step-by-step guide to setting up TactCheck, including prerequisites and configuration.
+---
+
+import { Callout } from "nextra/components"
+
+<Callout type="warning">
+  Warning: This documentation is still under heavy development. Content may have
+  errors, change frequently, and certain sections might be incomplete or subject
+  to revision. Please check back regularly for updates.
+</Callout>
+# Setting Up TactCheck
+
+Follow these instructions to set up TactCheck on your remote server.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v14 or higher)
+- **NPM** or **Yarn**
+- **Ruby** (v2.7 or higher)
+- **Rails** (v6.0 or higher)
+- **Mastodon** (Glitch Edition recommended)
+- **Google Spreadsheet API** access
+
+If you haven't installed Mastodon (Glitch Edition) yet, please refer to the [official Glitch Edition documentation](https://glitch-soc.github.io/docs/) for installation instructions.
+
+## Installation Steps
+
+1. **Clone Repositories**:
+
+   - Navigate to your Mastodon directory, typically located at `/home/{user}/live/`.
+   - Clone the [Gamepatch Repository](/docs/gamepatch) inside the Mastodon directory. Gamepatch is built with Ruby on Rails:
+     ```bash
+     cd /home/{user}/live/
+     git clone https://github.com/your-org/gamepatch.git
+     ```
+   - Clone the [Express Backend Repository](/docs/express) to your preferred location. The Express backend is built with Node.js:
+     ```bash
+     git clone https://github.com/your-org/express-backend.git
+     ```
+
+2. **Install Dependencies**:
+
+   - For Gamepatch (Ruby on Rails):
+     ```bash
+     cd /home/{user}/live/gamepatch
+     bundle install
+     ```
+   - For the Express backend (Node.js):
+     ```bash
+     cd /path/to/express-backend
+     npm install
+     ```
+
+3. **Configure Mastodon**:
+
+   - Update Mastodon settings according to the [Mastodon Customizations Guide](/docs/mastodon).
+
+4. **Set Up Environment Variables**:
+
+   - Create a `.env` file in each repository and populate it with the necessary credentials and API keys.
+
+5. **Run the Servers**:
+   - Start the Gamepatch (Rails) server:
+     ```bash
+     rails server
+     ```
+   - Start the Express (Node.js) server:
+     ```bash
+     npm start
+     ```
+
+## Next Steps
+
+Once everything is set up, explore the [Gamepatch Overview](/docs/gamepatch) to learn how to inject conversations into Mastodon.

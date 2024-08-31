@@ -1,0 +1,33 @@
+---
+title: Troubleshooting
+description: Common issues and their solutions when setting up and using TactCheck.
+---
+
+import { Callout } from "nextra/components"
+
+<Callout type="warning">
+  Warning: This documentation is still under heavy development. Content may have
+  errors, change frequently, and certain sections might be incomplete or subject
+  to revision. Please check back regularly for updates.
+</Callout>
+# Troubleshooting
+
+Encountering issues while setting up or running TactCheck? Here are some common problems and their solutions.
+
+## 1. Gamepatch Fails to Start
+
+**Solution:** Ensure you have the correct Ruby and Rails versions installed. Check the `.env` file for missing or incorrect environment variables.
+
+## 2. Express Backend Not Responding
+
+**Solution:** Verify that the Express server is running and correctly configured. Check the logs for any errors related to missing dependencies or misconfigured routes.
+
+## 3. Mastodon Integration Issues
+
+**Solution:** Double-check the Mastodon customizations and ensure that the API modifications are correctly implemented. If Mastodon is not responding as expected, restart the service and review the logs.
+
+## 4. Google Spreadsheet Not Syncing
+
+**Solution:** Ensure your Google API credentials are correctly set up in the `.env` file and that the Google Spreadsheet ID is correct. Verify that the Gamepatch has the necessary permissions to access the spreadsheet.
+
+If you continue to experience issues, please consult the [FAQ](/docs/faq) or reach out to the community for support.

@@ -1,0 +1,54 @@
+import { Callout } from "nextra/components"
+
+<Callout type="warning">
+  Warning: This documentation is still under heavy development. Content may have
+  errors, change frequently, and certain sections might be incomplete or subject
+  to revision. Please check back regularly for updates.
+</Callout>
+
+## Sending Queries to the Express Backend
+
+The Express backend provides several API endpoints for interacting with the Gamepatch system. Here’s how to send queries:
+
+### Example Endpoints
+
+1. **POST /api/conversations**
+
+   - **Description**: Submit a new conversation to be injected into Mastodon.
+   - **Request Body**:
+     ```json
+     {
+       "conversation": "Your conversation text here",
+       "metadata": {
+         "theme": "propaganda",
+         "timestamp": "2024-08-23T10:00:00Z"
+       }
+     }
+     ```
+   - **Response**:
+     ```json
+     {
+       "status": "success",
+       "message": "Conversation injected successfully"
+     }
+     ```
+
+2. **GET /api/status**
+   - **Description**: Check the status of the Gamepatch system.
+   - **Response**:
+     ```json
+     {
+       "status": "online",
+       "uptime": "48 hours"
+     }
+     ```
+
+### Example Query
+
+To submit a conversation, use the following `curl` command:
+
+```bash
+curl -X POST https://your-domain.com/api/conversations \
+-H "Content-Type: application/json" \
+-d '{"conversation": "Your conversation text here", "metadata": {"theme": "propaganda"}}'
+```

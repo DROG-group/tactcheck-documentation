@@ -1,0 +1,27 @@
+---
+title: Gamepatch Overview
+description: Learn about the Gamepatch system and how it integrates with Mastodon in TactCheck.
+---
+
+import { Callout } from "nextra/components"
+
+<Callout type="warning">
+  Warning: This documentation is still under heavy development. Content may have
+  errors, change frequently, and certain sections might be incomplete or subject
+  to revision. Please check back regularly for updates.
+</Callout>
+# Gamepatch Overview
+
+Gamepatch is a custom system built with Ruby on Rails that injects simulated conversations into Mastodon. It plays a crucial role in the TactCheck project, enabling the simulation of social media dynamics, including the spread of propaganda, hoaxes, and disinformation.
+
+## Features
+
+- **Conversation Injection**: Automatically posts predefined conversations into Mastodon from a Google Spreadsheet.
+- **Integration**: Seamlessly integrates with Mastodon (Glitch Edition) to simulate real-world social media interactions.
+- **Customization**: Easily configurable to support various themes and scenarios.
+
+## Configuration
+
+Gamepatch is located in the Mastodon directory at `/home/{user}/live/gamepatch`. Ensure all required environment variables are set correctly in the `.env` file.
+
+Explore more about the Express backend in the [next section](/docs/express).

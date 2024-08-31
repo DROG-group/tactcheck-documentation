@@ -1,0 +1,27 @@
+---
+title: Express Backend
+description: Overview of the Express backend, its purpose, and how it interacts with Gamepatch.
+---
+
+import { Callout } from "nextra/components"
+
+<Callout type="warning">
+  Warning: This documentation is still under heavy development. Content may have
+  errors, change frequently, and certain sections might be incomplete or subject
+  to revision. Please check back regularly for updates.
+</Callout>
+# Express Backend
+
+The Express backend is a Node.js application that acts as a bridge between the Gamepatch system and external inputs. It receives data from various sources, processes it, and forwards it to Gamepatch for injection into Mastodon.
+
+## Key Features
+
+- **API Gateway**: Exposes endpoints for interacting with the Gamepatch system.
+- **Data Parsing**: Processes incoming data before passing it to the Gamepatch.
+- **Modularity**: Can be extended to support additional data sources or processing logic.
+
+## Configuration
+
+The Express backend can be placed anywhere on your server. Make sure to set up environment variables in the `.env` file.
+
+Next, learn about the [Mastodon customizations](/docs/mastodon) that make TactCheck possible.
