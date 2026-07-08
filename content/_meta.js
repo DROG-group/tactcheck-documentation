@@ -1,0 +1,7 @@
+export default {
+  index: 'Home',
+  docs: 'Guide',
+  troubleshooting: 'Troubleshooting',
+  faq: 'Frequently Asked Questions',
+  contributing: 'Contribution Guide'
+}
