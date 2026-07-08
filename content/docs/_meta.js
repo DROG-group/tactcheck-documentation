@@ -1,0 +1,8 @@
+export default {
+  index: 'Start Here',
+  intro: 'Introduction',
+  setup: 'Setup Instructions',
+  gamepatch: 'Gamepatch Overview',
+  express: 'Express Backend',
+  mastodon: 'Mastodon Customizations'
+}
